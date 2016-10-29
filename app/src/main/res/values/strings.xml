@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">CapitalLab</string>
+    <string name="icon_app">&#xf20e;</string>
 </resources>
