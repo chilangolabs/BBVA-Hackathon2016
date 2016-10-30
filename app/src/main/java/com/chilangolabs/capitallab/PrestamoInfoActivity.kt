@@ -13,6 +13,10 @@ class PrestamoInfoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_prestamo_info)
 
+        toolbar.title = ""
+        setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         val categorias: Array<String> = arrayOf("6 meses", "12 meses", "24 meses", "48 meses")
 
         val adapter: ArrayAdapter<String> = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, categorias)

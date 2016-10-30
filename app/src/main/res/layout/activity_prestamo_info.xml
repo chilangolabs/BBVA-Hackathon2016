@@ -13,19 +13,21 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true" />
+        android:layout_alignParentTop="true"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <com.chilangolabs.capitallab.OwnElements.MontSerratTextView
         android:id="@+id/txtTitlePrestamo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="30dp"
         android:gravity="center"
         android:text="Cuentanos más sobre el\nprestamo que necesitas"
         android:textColor="@android:color/white"
-        android:textSize="24sp"
-        app:font="regular" />
+        android:textSize="20sp"
+        app:font="light" />
 
 
     <com.chilangolabs.capitallab.OwnElements.MontSerratEditText
@@ -61,7 +63,7 @@
         android:text="¿Cuanto dinero necesitas?"
         android:textColor="@android:color/white"
         android:textSize="20sp"
-        app:font="regular" />
+        app:font="light" />
 
     <com.chilangolabs.capitallab.OwnElements.MontSerratTextView
         android:id="@+id/txtMoney"

@@ -20,12 +20,15 @@
         <activity
             android:name=".ProfileActivity"
             android:label="@string/title_activity_profile"
+            android:parentActivityName=".ComoQuieresIniciarActivity"
             android:theme="@style/AppTheme" />
         <activity android:name=".ComoQuieresIniciarActivity" />
         <activity
             android:name=".WelcomeActivity"
             android:theme="@style/WelcomeScreenTheme" />
-        <activity android:name=".PrestamoInfoActivity"></activity>
+        <activity
+            android:name=".PrestamoInfoActivity"
+            android:parentActivityName=".ProfileActivity" />
     </application>
 
 </manifest>
