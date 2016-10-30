@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.chilangolabs.capitallab.DetailActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/cafeteria"
+            android:transitionName="imgdetail"
+            tools:ignore="ContentDescription" />
+
+        <com.chilangolabs.capitallab.OwnElements.MontSerratTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Mi primer cafeteria"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:transitionName="nameDetail"
+            app:font="regular" />
+    </RelativeLayout>
+
+    <com.chilangolabs.capitallab.OwnElements.MontSerratTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:text="Dinero necesario"
+        android:textColor="#b8000000"
+        android:textSize="24sp"
+        app:font="light" />
+
+    <com.chilangolabs.capitallab.OwnElements.MontSerratTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:text="$350,000"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp"
+        app:font="regular" />
+
+    <com.chilangolabs.capitallab.OwnElements.MontSerratTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:text="Fondeado por:"
+        app:font="hairline" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:src="@mipmap/bancomer" />
+
+    <com.chilangolabs.capitallab.OwnElements.MontSerratTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:text="Modalidad:"
+        app:font="hairline" />
+
+    <com.chilangolabs.capitallab.OwnElements.MontSerratTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:text="12 meses"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        app:font="regular"/>
+
+    <com.chilangolabs.capitallab.OwnElements.MontSerratTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:text="Intereses:"
+        app:font="hairline" />
+
+    <com.chilangolabs.capitallab.OwnElements.MontSerratTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:text="5.5%"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        app:font="regular"/>
+
+</LinearLayout>

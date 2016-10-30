@@ -21,12 +21,56 @@
         android:textColor="@color/colorPrimary"
         app:font="regular" />
 
-    <ImageView
+    <RelativeLayout
+        android:id="@+id/btnCafeteria"
         android:layout_width="match_parent"
-        android:layout_height="110dp"
-        android:scaleType="centerCrop"
-        android:src="@mipmap/cafeteria"
-        tools:ignore="ContentDescription" />
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgCafeteria"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/cafeteria"
+            android:transitionName="imgdetail"
+            tools:ignore="ContentDescription" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.chilangolabs.capitallab.OwnElements.MontSerratTextView
+                android:id="@+id/txtCafeteria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mi primer cafeteria"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:transitionName="nameDetail"
+                app:font="regular" />
+
+            <com.chilangolabs.capitallab.OwnElements.MontSerratTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dinero necesario: $350,000"
+                android:textColor="@android:color/white"
+                android:textSize="10sp"
+                app:font="light" />
+
+            <com.chilangolabs.capitallab.OwnElements.MontSerratTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fondeado por BBVA Bancomer"
+                android:textColor="@android:color/white"
+                android:textSize="10sp"
+                app:font="light" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
 
     <com.chilangolabs.capitallab.OwnElements.MontSerratTextView
         android:layout_width="wrap_content"
