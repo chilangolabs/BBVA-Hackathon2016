@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_prestamo_info"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient_blue"
+    android:orientation="vertical"
+    tools:context="com.chilangolabs.capitallab.PrestamoInfoActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <com.chilangolabs.capitallab.OwnElements.MontSerratTextView
+        android:id="@+id/txtTitlePrestamo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:gravity="center"
+        android:text="Cuentanos más sobre el\nprestamo que necesitas"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:font="regular" />
+
+
+    <com.chilangolabs.capitallab.OwnElements.MontSerratEditText
+        android:id="@+id/edtxNecesitoUnPrestamo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtTitlePrestamo"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:background="@drawable/bg_white_rounded"
+        android:hint="Necesito un prestamo para..."
+        android:padding="10dp"
+        android:textSize="16sp"
+        app:font="light" />
+
+    <android.support.v7.widget.AppCompatSpinner
+        android:id="@+id/spinnerCategoria"
+        style="?android:attr/spinnerItemStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtxNecesitoUnPrestamo"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:background="@drawable/bg_white_rounded"
+        android:hint="Categoría del prestamo"
+        android:labelFor="@+id/edtxNecesitoUnPrestamo"
+        android:padding="5dp" />
+
+    <com.chilangolabs.capitallab.OwnElements.MontSerratTextView
+        android:id="@+id/txtCuantoDineroNecesitas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinnerCategoria"
+        android:layout_centerHorizontal="true"
+        android:text="¿Cuanto dinero necesitas?"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        app:font="regular" />
+
+    <com.chilangolabs.capitallab.OwnElements.MontSerratTextView
+        android:id="@+id/txtMoney"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtCuantoDineroNecesitas"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:background="@drawable/bg_white_rounded"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="$75,000"
+        android:textColor="@color/colorPrimary"
+        android:textSize="28sp"
+        app:font="regular" />
+
+    <SeekBar
+        android:id="@+id/seeker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtMoney"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:max="500000"
+        android:progress="30" />
+
+    <com.chilangolabs.capitallab.OwnElements.MontSerratTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/seeker"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:text="$10k"
+        android:textColor="@android:color/white"
+        app:font="light" />
+
+    <com.chilangolabs.capitallab.OwnElements.MontSerratTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/seeker"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:text="$500k"
+        android:textColor="@android:color/white"
+        app:font="light" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/container_white"
+        android:layout_marginBottom="-5dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/waves"
+        tools:ignore="ContentDescription" />
+
+    <LinearLayout
+        android:id="@+id/container_white"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.chilangolabs.capitallab.OwnElements.MontSerratButton
+            android:id="@+id/btnMainNext"
+            style="?attr/buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="60dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginStart="60dp"
+            android:background="@drawable/btn_rounded_blue"
+            android:text="Comenzar"
+            android:textColor="@android:color/white"
+            app:font="regular" />
+
+    </LinearLayout>
+
+</RelativeLayout>

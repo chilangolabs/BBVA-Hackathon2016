@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">CapitalLab</string>
     <string name="icon_app">&#xf20e;</string>
+    <string name="icon_fondeador">&#xf19c;</string>
+    <string name="title_activity_profile">ProfileActivity</string>
+    <string name="perfil">Perfil</string>
+    <string name="add">Add</string>
+    <string name="c_mo_te_gustar_a_iniciar">¿Cómo te gustaría iniciar?</string>
+    <string name="persona">Persona</string>
+    <string name="fondeador">Fondeador</string>
+    <string name="categor_a_del_prestamo">Categoría del prestamo</string>
 </resources>
