@@ -127,7 +127,7 @@
         android:orientation="vertical">
 
         <com.chilangolabs.capitallab.OwnElements.MontSerratButton
-            android:id="@+id/btnMainNext"
+            android:id="@+id/btnPrestamo"
             style="?attr/buttonBarStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
