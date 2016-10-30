@@ -28,17 +28,17 @@
         <com.chilangolabs.capitallab.OwnElements.MontSerratTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="NOMBRE"
+            android:text="CAPITAL"
             android:textColor="@android:color/white"
-            android:textSize="32sp"
+            android:textSize="34sp"
             app:font="hairline" />
 
         <com.chilangolabs.capitallab.OwnElements.MontSerratTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CHINGON MAMALON"
+            android:text="LABS"
             android:textColor="@android:color/white"
-            android:textSize="14sp"
+            android:textSize="26sp"
             app:font="regular" />
 
     </LinearLayout>

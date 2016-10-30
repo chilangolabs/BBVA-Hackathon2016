@@ -22,7 +22,7 @@ class PrestamoInfoActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        val categorias: Array<String> = arrayOf("6 meses", "12 meses", "24 meses", "48 meses")
+        val categorias: Array<String> = arrayOf("Vivienda", "Automotriz", "Comercial y Negocios", "Educativo", "Medico", "Otro")
 
         val adapter: ArrayAdapter<String> = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, categorias)
 
@@ -43,21 +43,25 @@ class PrestamoInfoActivity : AppCompatActivity() {
         })
 
         btnPrestamo.setOnClickListener {
-            val dialog = AlertDialog.Builder(this)
-                    .setTitle("Prestamo")
-                    .setMessage("""Estas seguro que necesitas ${txtMoney.text} para ${edtxNecesitoUnPrestamo.text} a ${categorias[spinnerCategoria.selectedItemPosition - 1]}?""")
-                    .setPositiveButton("Estoy Seguro", { dialogInterface, i ->
-                        dialogInterface.dismiss()
-                        finish()
-                        Toast.makeText(this, "Tu solicitud esta siendo procesada", Toast.LENGTH_LONG).show()
-                    })
-                    .setNegativeButton("Cancelar", { dialogInterface, i ->
-                        dialogInterface.dismiss()
-                    })
-                    .create()
-            dialog.show()
-            dialog.getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(resources.getColor(R.color.colorPrimary))
-            dialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(resources.getColor(R.color.colorPrimary))
+            if (spinnerCategoria.selectedItemPosition > 0) {
+                val dialog = AlertDialog.Builder(this)
+                        .setTitle("Prestamo")
+                        .setMessage("""Estas seguro que necesitas ${txtMoney.text} para ${edtxNecesitoUnPrestamo.text} en la categoria de ${categorias[spinnerCategoria.selectedItemPosition - 1]}?""")
+                        .setPositiveButton("Estoy Seguro", { dialogInterface, i ->
+                            dialogInterface.dismiss()
+                            finish()
+                            Toast.makeText(this, "Tu solicitud esta siendo procesada", Toast.LENGTH_LONG).show()
+                        })
+                        .setNegativeButton("Cancelar", { dialogInterface, i ->
+                            dialogInterface.dismiss()
+                        })
+                        .create()
+                dialog.show()
+                dialog.getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(resources.getColor(R.color.colorPrimary))
+                dialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(resources.getColor(R.color.colorPrimary))
+            } else {
+                Toast.makeText(this, "Selecciona la categoría por favor", Toast.LENGTH_LONG).show()
+            }
         }
 
     }
